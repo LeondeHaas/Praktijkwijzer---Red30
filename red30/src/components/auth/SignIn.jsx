@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { auth } from "../../Database/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import "../../css/App.css";
+import FoodSearch from '../../FoodSearch';
 
 const SignIn = () => {
     const [email, setEmail] = useState('');
@@ -24,6 +25,9 @@ const SignIn = () => {
                 <input type="password" placeholder='Enter your password' value={password} onChange={(e) => setPassword(e.target.value)} />
                 <button type="submit" className="primary-button">Log in</button>
             </form>
+
+            {/* Add the FoodSearch component here */}
+            <FoodSearch />
         </div>
     );
 };
