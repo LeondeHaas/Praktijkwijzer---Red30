@@ -23,3 +23,12 @@ input {
     align-items: center;
     padding: 15px;
 }
+
+.nutrient-container {
+    width: 30%; /* Adjust the width as needed */
+    margin-top: 20px;
+    margin-left: auto;
+    padding: 15px;
+    background-color: #F5F5F5;
+    overflow-y: auto; /* Add scrollbar if necessary */
+}
