@@ -28,6 +28,8 @@ const AuthDetails = () => {
     };
 
     return (
+        <>
+        
         <div>
             {authUser ? (
                 <>
@@ -38,6 +40,7 @@ const AuthDetails = () => {
                 <p>Signed Out</p>
             )}
         </div>
+        </>
     );
 };
 

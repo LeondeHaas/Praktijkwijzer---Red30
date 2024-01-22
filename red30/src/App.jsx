@@ -7,9 +7,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <AuthDetails/>
-      <SignUp/>
-      <SignIn/>
     </div>
   );
 }
