@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Header from "./components/Header";
 
 const FoodSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const [selectedFood, setSelectedFood] = useState(null);
+  const [selectedFood1, setSelectedFood1] = useState(null);
+  const [selectedFood2, setSelectedFood2] = useState(null);
 
   const handleSearchChange = async (e) => {
     const term = e.target.value;
@@ -21,53 +23,102 @@ const FoodSearch = () => {
     }
   };
 
-  const handleFoodSelect = async (fdcId) => {
+  const handleFoodSelect1 = async (fdcId) => {
     try {
       const response = await axios.get(
         `https://api.nal.usda.gov/fdc/v1/food/${fdcId}?api_key=K4aj9cFIwZbnbfjuL5w2b2wLmlFtPGoY5kDXjURR`
       );
 
       const { description, foodNutrients } = response.data;
-      setSelectedFood({ description, foodNutrients });
+      setSelectedFood1({ description, foodNutrients });
     } catch (error) {
       console.error("Error fetching food details:", error);
     }
   };
 
+  const handleFoodSelect2 = async (fdcId) => {
+    try {
+      const response = await axios.get(
+        `https://api.nal.usda.gov/fdc/v1/food/${fdcId}?api_key=K4aj9cFIwZbnbfjuL5w2b2wLmlFtPGoY5kDXjURR`
+      );
+
+      const { description, foodNutrients } = response.data;
+      setSelectedFood2({ description, foodNutrients });
+    } catch (error) {
+      console.error("Error fetching food details:", error);
+    }
+  };
+
+  // const foodCompare = async (fdcId) => {
+  //   const foodDetails = await fetchFoodDetails(fdcId);
+  //   if (foodDetails) {
+  //     setSecondSelectedFood(foodDetails);
+  //   }
+  // };
+
+
   return (
-    <div>
+    <>
+    <Header />
+    <div className='search-container'>
       <input
         type="text"
         placeholder="Search for food..."
         value={searchTerm}
         onChange={handleSearchChange}
+        className='search-input'
       />
-      <ul>
-        {searchResults.map((food) => (
-          <li key={food.fdcId}>
-            {food.description}{" "}
-            <button onClick={() => handleFoodSelect(food.fdcId)}>
-              Select
-            </button>
-          </li>
-        ))}
-      </ul>
-      {selectedFood &&
-  selectedFood.foodNutrients &&
-  selectedFood.foodNutrients.length > 0 ? (
-    <div className="nutrient-container">
-      <h2>{selectedFood.description}</h2>
-      <ul>
-        {selectedFood.foodNutrients.map((nutrient) => (
-          <li key={nutrient.id}>
-            {nutrient.nutrient.name}: {nutrient.amount} {nutrient.nutrient.unitName}
-          </li>
-        ))}
-      </ul>
+      
+      <div className='results-container'>
+        <div className='search-results'>
+          {searchResults.map((food) => (
+            <div key={food.fdcId} className='search-result-item'>
+              {food.description}{" "}
+              <button onClick={() => handleFoodSelect1(food.fdcId)} className='select-button'>
+                Select
+              </button>
+              <button onClick={() => handleFoodSelect2(food.fdcId)} className='select-button'>
+                Compare
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {selectedFood1 &&
+          selectedFood1.foodNutrients &&
+          selectedFood1.foodNutrients.length > 0 ? (
+            <div className="nutrient-container">
+              <h2 className='nutrient-heading'>{selectedFood1.description}</h2>
+              <ul className='nutrient-list'>
+                {selectedFood1.foodNutrients.map((nutrient) => (
+                  <li key={nutrient.id} className='nutrient-item'>
+                    {nutrient.nutrient.name}: {nutrient.amount} {nutrient.nutrient.unitName}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        
+       
+
+        {selectedFood2 &&
+          selectedFood2.foodNutrients &&
+          selectedFood2.foodNutrients.length > 0 ? (
+            <div className="nutrient-container">
+              <h2 className='nutrient-heading'>{selectedFood2.description}</h2>
+              <ul className='nutrient-list'>
+                {selectedFood2.foodNutrients.map((nutrient) => (
+                  <li key={nutrient.id} className='nutrient-item'>
+                    {nutrient.nutrient.name}: {nutrient.amount} {nutrient.nutrient.unitName}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+      </div>
     </div>
-  ) : null}
-    </div>
-  );
+  </>
+);
 };
 
 export default FoodSearch;

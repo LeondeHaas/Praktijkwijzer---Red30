@@ -144,3 +144,79 @@ button {
   border: 1px solid #ccc;
   border-radius: 4
 }
+
+/* styles.css */
+
+/* styles.css */
+
+.search-container {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.search-result-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  height: 40px; /* Adjust the height as needed */
+}
+
+.result-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px; /* Add spacing between text and button */
+}
+
+.select-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px 15px; /* Fixed width for all buttons, adjust as needed */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select-button:hover {
+  background-color: #2980b9;
+}
+
+.nutrient-container {
+  text-align: left;
+}
+
+.nutrient-heading {
+  font-size: 18px;
+  color: #333;
+}
+
+.nutrient-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nutrient-item {
+  margin-bottom: 5px;
+}

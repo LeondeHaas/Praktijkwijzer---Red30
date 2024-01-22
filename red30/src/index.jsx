@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import SignIn from './components/auth/SignIn.jsx';
 import SignUp from './components/auth/SignUp.jsx';
+import FoodSearch from './FoodSearch.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/register" element={<SignUp />} />
+        <Route path="/foodsearch" element={<FoodSearch />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

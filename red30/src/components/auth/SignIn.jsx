@@ -3,7 +3,7 @@ import { auth } from "../../Database/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import "../../css/App.css";
 import FoodSearch from '../../FoodSearch';
-import Header from "../header";
+import Header from "../Header";
 
 const SignIn = () => {
     const [email, setEmail] = useState('');
