@@ -32,3 +32,191 @@ input {
     background-color: #F5F5F5;
     overflow-y: auto; /* Add scrollbar if necessary */
 }
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Default state */
+  button {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  /* Hover state */
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Active (clicked) state */
+  button:active {
+    background-color: #1f618d;
+  }
+
+  .signInContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .input {
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  .button:active {
+    background-color: #1f618d;
+  }
+
+  .inlogknop {
+    margin-left: 50px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .inlogknop:hover {
+    background-color: #2980b9;
+  }
+  
+  .inlogknop:active {
+    background-color: #1f618d;
+  }
+
+  /* styles.css */
+
+.createAccountContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px auto;
+}
+
+.createAccountTitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.createAccountForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.createAccountInput {
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 4
+}
+
+/* styles.css */
+
+/* styles.css */
+
+.search-container {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.search-result-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  height: 40px; /* Adjust the height as needed */
+}
+
+.result-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px; /* Add spacing between text and button */
+}
+
+.select-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px 15px; /* Fixed width for all buttons, adjust as needed */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select-button:hover {
+  background-color: #2980b9;
+}
+
+.nutrient-container {
+  text-align: left;
+}
+
+.nutrient-heading {
+  font-size: 18px;
+  color: #333;
+}
+
+.nutrient-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nutrient-item {
+  margin-bottom: 5px;
+}
