@@ -256,7 +256,8 @@ button {
 }
 
 .fruit-image{
-  width: 600px;
+  width: 350px;
+  height: auto;
 }
 
 .fruitmanddoos{
