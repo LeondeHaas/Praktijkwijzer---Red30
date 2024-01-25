@@ -1,119 +1,141 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .primary-button {
-    width: 100px;
-    height: 35px;
+  width: 100px;
+  height: 35px;
 }
 
 input {
-    height: 35px;
-    margin-right: 20px;
+  height: 35px;
+  margin-right: 20px;
+}
+.homeknop {
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+.homered {
+  color: red;
+}
+.authstyle {
+  display: flex;
+  align-items: center;
 }
 
 .main-header {
-    width: 100%;
-    background-color: #D9D9D9;
-    height: auto;
-    justify-content: right;
-    display: flex;
-    align-items: center;
-    padding: 15px;
+  width: 100%;
+  background-color: #d9d9d9;
+  height: auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: left;
+  padding: 15px;
+}
+.left-header {
+  justify-content: left;
+  display: flex;
+  align-items: center;
+}
+.right-header {
+  justify-content: right;
+  display: flex;
+  align-items: center;
 }
 
 .nutrient-container {
-    width: 30%; /* Adjust the width as needed */
-    margin-top: 20px;
-    margin-left: auto;
-    padding: 15px;
-    background-color: #F5F5F5;
-    overflow-y: auto; /* Add scrollbar if necessary */
+  width: 30%; /* Adjust the width as needed */
+  margin-top: 20px;
+  margin-left: auto;
+  padding: 15px;
+  background-color: #f5f5f5;
+  overflow-y: auto; /* Add scrollbar if necessary */
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Default state */
-  button {
-    background-color: #3498db;
-    color: #fff;
-  }
-  
-  /* Hover state */
-  button:hover {
-    background-color: #2980b9;
-  }
-  
-  /* Active (clicked) state */
-  button:active {
-    background-color: #1f618d;
-  }
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  .signInContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: 20px auto;
-  }
-  
-  .input {
-    padding: 10px;
-    margin: 5px 0 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-  }
-  
-  .button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .button:hover {
-    background-color: #2980b9;
-  }
-  
-  .button:active {
-    background-color: #1f618d;
-  }
+/* Default state */
+button {
+  background-color: #3498db;
+  color: #fff;
+}
 
-  .inlogknop {
-    margin-left: 50px;
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .inlogknop:hover {
-    background-color: #2980b9;
-  }
-  
-  .inlogknop:active {
-    background-color: #1f618d;
-  }
+/* Hover state */
+button:hover {
+  background-color: #2980b9;
+}
 
-  /* styles.css */
+/* Active (clicked) state */
+button:active {
+  background-color: #1f618d;
+}
+
+.signInContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px auto;
+}
+
+.input {
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.button:active {
+  background-color: #1f618d;
+}
+
+.inlogknop {
+  margin-left: 50px;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inlogknop:hover {
+  background-color: #2980b9;
+}
+
+.inlogknop:active {
+  background-color: #1f618d;
+}
+
+/* styles.css */
 
 .createAccountContainer {
   display: flex;
@@ -142,7 +164,7 @@ button {
   padding: 10px;
   margin: 5px 0 15px 0;
   border: 1px solid #ccc;
-  border-radius: 4
+  border-radius: 4;
 }
 
 /* styles.css */
@@ -255,12 +277,12 @@ button {
   background-color: darkred;
 }
 
-.fruit-image{
+.fruit-image {
   width: 350px;
   height: auto;
 }
 
-.fruitmanddoos{
+.fruitmanddoos {
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
