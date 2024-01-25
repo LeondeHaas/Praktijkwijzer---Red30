@@ -220,3 +220,46 @@ button {
 .nutrient-item {
   margin-bottom: 5px;
 }
+
+/* Home.css */
+
+/* Home.css */
+
+.welcome-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.red-word {
+  color: red;
+  font-weight: bold; /* Optional: Make the "Red" text bold */
+}
+
+.motto-text {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.get-started-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.get-started-button:hover {
+  background-color: darkred;
+}
+
+.fruit-image{
+  width: 600px;
+}
+
+.fruitmanddoos{
+  display: flex;
+  justify-content: center
+}
