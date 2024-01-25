@@ -115,17 +115,17 @@ const FoodSearch = () => {
               </div>
             ) : null}
 
-<div className="nutrient-container">
-        <h2>Calorie Difference</h2>
-        {calculateCalorieDifference() !== null ? (
-          <p>
-            {selectedFood2.description} {calculateCalorieDifference() > 0 ? '+' : '-'}
-            {Math.abs(calculateCalorieDifference())} kcal
-          </p>
-        ) : (
-          <p>Select two items to compare calories</p>
-        )}
-      </div>
+          <div className="nutrient-container">
+            <h2>Calorie Difference</h2>
+            {calculateCalorieDifference() !== null ? (
+              <p style={{ color: calculateCalorieDifference() > 0 ? 'red' : 'lime' }}>
+                {selectedFood2.description} {calculateCalorieDifference() > 0 ? '+' : '-'}
+                {Math.abs(calculateCalorieDifference())} kcal
+              </p>
+            ) : (
+              <p>Select two items to compare calories</p>
+            )}
+          </div>
 
           {selectedFood2 &&
             selectedFood2.foodNutrients &&
@@ -143,7 +143,6 @@ const FoodSearch = () => {
             ) : null}
         </div>
       </div>
-
     </>
   );
 };

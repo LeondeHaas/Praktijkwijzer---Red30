@@ -229,6 +229,8 @@ button:active {
   text-align: left;
 }
 
+
+
 .nutrient-heading {
   font-size: 18px;
   color: #333;
@@ -285,4 +287,11 @@ button:active {
 .fruitmanddoos {
   display: flex;
   justify-content: center;
+}
+
+.signed-user {
+  margin-right: 50px;
+  background-color: lime;
+  padding: 5px 15px;
+  border-radius: 4px;
 }

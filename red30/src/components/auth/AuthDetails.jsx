@@ -35,7 +35,7 @@ const AuthDetails = () => {
       <div className='authstyle'>
         {authUser ? (
           <>
-            <p>{`Signed In as ${authUser.email}`}</p>
+            <p className='signed-user'>{`Signed In as ${authUser.email}`}</p>
             <button onClick={userSignOut}>Sign Out</button>
             {/* Render the food search button when logged in */}
             <Link className='inlogknop' to={'/foodsearch'}>
