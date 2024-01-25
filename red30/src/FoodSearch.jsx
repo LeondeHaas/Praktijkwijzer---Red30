@@ -49,76 +49,103 @@ const FoodSearch = () => {
     }
   };
 
-  // const foodCompare = async (fdcId) => {
-  //   const foodDetails = await fetchFoodDetails(fdcId);
-  //   if (foodDetails) {
-  //     setSecondSelectedFood(foodDetails);
-  //   }
-  // };
+  const calculateCalorieDifference = () => {
+    if (
+      selectedFood1 &&
+      selectedFood1.foodNutrients &&
+      selectedFood1.foodNutrients.length > 0 &&
+      selectedFood2 &&
+      selectedFood2.foodNutrients &&
+      selectedFood2.foodNutrients.length > 0
+    ) {
+      const calories1 = selectedFood1.foodNutrients.find(
+        (nutrient) => nutrient.nutrient.name === 'Energy'
+      );
+      const calories2 = selectedFood2.foodNutrients.find(
+        (nutrient) => nutrient.nutrient.name === 'Energy'
+      );
 
+      if (calories1 && calories2) {
+        const difference = calories2.amount - calories1.amount;
+        return difference;
+      }
+    }
+    return null;
+  };
 
   return (
     <>
-    <Header />
-    <div className='search-container'>
-      <input
-        type="text"
-        placeholder="Search for food..."
-        value={searchTerm}
-        onChange={handleSearchChange}
-        className='search-input'
-      />
-      
-      <div className='results-container'>
-        <div className='search-results'>
-          {searchResults.map((food) => (
-            <div key={food.fdcId} className='search-result-item'>
-              {food.description}{" "}
-              <button onClick={() => handleFoodSelect1(food.fdcId)} className='select-button'>
-                Select
-              </button>
-              <button onClick={() => handleFoodSelect2(food.fdcId)} className='select-button'>
-                Compare
-              </button>
-            </div>
-          ))}
-        </div>
+      <Header />
+      <div className='search-container'>
+        <input
+          type="text"
+          placeholder="Search for food..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+          className='search-input'
+        />
 
-        {selectedFood1 &&
-          selectedFood1.foodNutrients &&
-          selectedFood1.foodNutrients.length > 0 ? (
-            <div className="nutrient-container">
-              <h2 className='nutrient-heading'>{selectedFood1.description}</h2>
-              <ul className='nutrient-list'>
-                {selectedFood1.foodNutrients.map((nutrient) => (
-                  <li key={nutrient.id} className='nutrient-item'>
-                    {nutrient.nutrient.name}: {nutrient.amount} {nutrient.nutrient.unitName}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
-        
-       
+        <div className='results-container'>
+          <div className='search-results'>
+            {searchResults.map((food) => (
+              <div key={food.fdcId} className='search-result-item'>
+                {food.description}{" "}
+                <button onClick={() => handleFoodSelect1(food.fdcId)} className='select-button'>
+                  Select
+                </button>
+                <button onClick={() => handleFoodSelect2(food.fdcId)} className='select-button'>
+                  Compare
+                </button>
+              </div>
+            ))}
+          </div>
 
-        {selectedFood2 &&
-          selectedFood2.foodNutrients &&
-          selectedFood2.foodNutrients.length > 0 ? (
-            <div className="nutrient-container">
-              <h2 className='nutrient-heading'>{selectedFood2.description}</h2>
-              <ul className='nutrient-list'>
-                {selectedFood2.foodNutrients.map((nutrient) => (
-                  <li key={nutrient.id} className='nutrient-item'>
-                    {nutrient.nutrient.name}: {nutrient.amount} {nutrient.nutrient.unitName}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
+          {selectedFood1 &&
+            selectedFood1.foodNutrients &&
+            selectedFood1.foodNutrients.length > 0 ? (
+              <div className="nutrient-container">
+                <h2 className='nutrient-heading'>{selectedFood1.description}</h2>
+                <ul className='nutrient-list'>
+                  {selectedFood1.foodNutrients.map((nutrient) => (
+                    <li key={nutrient.id} className='nutrient-item'>
+                      {nutrient.nutrient.name}: {nutrient.amount} {nutrient.nutrient.unitName}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+
+<div className="nutrient-container">
+        <h2>Calorie Difference</h2>
+        {calculateCalorieDifference() !== null ? (
+          <p>
+            {selectedFood2.description} {calculateCalorieDifference() > 0 ? '+' : '-'}
+            {Math.abs(calculateCalorieDifference())} kcal
+          </p>
+        ) : (
+          <p>Select two items to compare calories</p>
+        )}
       </div>
-    </div>
-  </>
-);
+
+          {selectedFood2 &&
+            selectedFood2.foodNutrients &&
+            selectedFood2.foodNutrients.length > 0 ? (
+              <div className="nutrient-container">
+                <h2 className='nutrient-heading'>{selectedFood2.description}</h2>
+                <ul className='nutrient-list'>
+                  {selectedFood2.foodNutrients.map((nutrient) => (
+                    <li key={nutrient.id} className='nutrient-item'>
+                      {nutrient.nutrient.name}: {nutrient.amount} {nutrient.nutrient.unitName}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+        </div>
+      </div>
+
+    </>
+  );
 };
 
 export default FoodSearch;

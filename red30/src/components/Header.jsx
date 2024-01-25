@@ -13,6 +13,7 @@ const Header = () => {
       <Link className='inlogknop' to={"/login"}>Inloggen</Link>
       <Link className='inlogknop' to={"/register"}>Account aanmaken</Link>
       <Link className='inlogknop' to={"/"}>Home</Link>
+
     </div>
   )
 }
