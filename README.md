@@ -1,11 +1,10 @@
-![image](https://github.com/LeondeHaas/Praktijkwijzer---Red30/assets/96114373/990faef7-ba88-449c-a70d-7418d537a0cc)
-![image](https://github.com/LeondeHaas/Praktijkwijzer---Red30/assets/96114373/eeeb127e-6a6c-4b59-966b-2f8fc134d0e7)
+![image](https://github.com/LeondeHaas/Praktijkwijzer---Red30/assets/96114373/f0b209d6-e534-4355-93ed-fba20b5fc0ef)
 
-![image](https://github.com/LeondeHaas/Praktijkwijzer---Red30/assets/96114373/7cf391ea-d424-4195-8cdb-2eb5bc96bf35)
+![image](https://github.com/LeondeHaas/Praktijkwijzer---Red30/assets/96114373/60916e93-762d-44c2-8992-988a2695a555)
 
-![image](https://github.com/LeondeHaas/Praktijkwijzer---Red30/assets/96114373/c8a8031f-1fa6-4762-aad7-f3fb9e11ed34)
+![image](https://github.com/LeondeHaas/Praktijkwijzer---Red30/assets/96114373/18438dd4-1032-49dd-a497-2ca175107bdf)
 
-
+![image](https://github.com/LeondeHaas/Praktijkwijzer---Red30/assets/96114373/3bae4f5a-b197-43f6-8b21-8cf4ef9430d5)
 
 
 
